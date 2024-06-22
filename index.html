@@ -1,0 +1,97 @@
+<!-- Esté a tag de comentários em arquivos HTML -->
+<!-- Com o uso da função ! no VSCode, Emmet já insere as configuraçõs basicas para a página de forma automática. -->
+<!-- Configuração do Tipo de Arquivo <doctype> -->
+<!DOCTYPE html>
+<!-- Configurar a linguagem da página (Atributo:lang) -->
+<html lang="pt-br"> <!-- A tag <html> também é conhecida como ''root'''-->
+  <!-- Configurações Gerais da Página <head>. *Não visiveis para o usuario* -->
+  <head>
+    <!-- Adicionar fontes a pagina. Pesquisar no google fonts pelo codigo e introduzi-lo ao <head> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <!-- Codigo que define os caractéres aceitos na pagina -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configurações de Visualização da Pagina -->
+    <title>DevLinks - Aprendizagem</title>
+    <!-- Titulo da pagina exibido na aba do navegador -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Esta configuração é feita para que seja aplicado o arquivo de CSS a pagina, porém, deve ser criada de forma manual usando 
+     o comando <link> -->
+  </head>
+  <body>
+    <!-- Codigos que estruturam o corpo da pagina -->
+    <div id="container">
+      <!-- <div> Tag para caixas genéricas. Utilizando o atributo ID, é possivel atribuir um nome unico para identificar posteriormente onde necessario -->
+      <!-- Usando # e escrevendo o nome para o ID é possivel abreviar a necessidade de adicionar a tag e identifica-la manualmente. Porém provavelmente precisa de uma tag ''mãe''-->
+      <div id="profile">
+        <img src="./assets/avatar.png" alt="Aqui é DarkMode." />
+        <p>@mykebrito</p>
+      </div>
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+      <!-- Para criar listas não ordenadas, utilizamos a tag <ul> -->
+      <!-- Para listar itens, usamos a tag <li> -->
+      <ul>
+        <li>
+          <!-- Ao criar um link que não quer inserir um valor href, usar # para deixar ''em branco'''-->
+          <!-- Por padrão, ao clicar no link, o usuario vai ser redirecionado na pagina que está em uso. Porém, ao adicionar a propriedade (target:_blank) logo após o (href), é possivel fazer com que o link seja aberto em uma nova aba em branco. -->
+          <a href="#">Inscreva-se no NLW</a>
+        </li>
+        <li>
+          <a href="#">Baixe meu E-book</a>
+        </li>
+        <li>
+          <a href="#">Veja meu Portifólio</a>
+        </li>
+        <li>
+          <a href="#">Conheça o Explorer</a>
+        </li>
+      </ul>
+      <div id="social-links">
+        <a href="http://github.com" target="_blank" rel="noopener noreferrer">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a
+          href="http://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a
+          href="http://youtube.com.br"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <a
+          href="http://linkedin.com.br"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+      <footer>
+        Feito com ♥ pela <a href="https://rocketseat.com.br" target="_blank">Rocketseat</a>
+      </footer>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+<script src="./script.js"></script>
+  </body>
+</html>
